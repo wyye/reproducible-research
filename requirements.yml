@@ -1,0 +1,5 @@
+name: plot
+dependencies:
+  - numpy
+  - matplotlib
+  - jupyter

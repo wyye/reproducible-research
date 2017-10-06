@@ -1,0 +1,12 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: wyye/reproducible:0.2
+    steps:
+      - checkout
+      - run:
+          name: Convert ipynb to html
+          command: make html
+      - store_artifacts:
+          path: plot.html
