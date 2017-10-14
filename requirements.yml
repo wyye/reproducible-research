@@ -1,7 +1,9 @@
 name: plot
+channels:
+  - conda-forge
 dependencies:
   - numpy
   - matplotlib
   - jupyter
   - xgboost
-  - lighgbm
+  - lightgbm
