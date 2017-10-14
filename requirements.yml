@@ -3,3 +3,5 @@ dependencies:
   - numpy
   - matplotlib
   - jupyter
+  - xgboost
+  - lighgbm
