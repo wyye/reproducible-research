@@ -5,7 +5,7 @@ USER jupyter
 WORKDIR /home/jupyter/
 ADD requirements.yml /home/jupyter
 RUN ["conda", "env", "create", "-f", "/home/jupyter/requirements.yml"]
-ENV PATH /opt/conda/envs/plot/bin:$PATH
+RUN conda install --yes python=3.6 numpy matplotlib jupyter scikit-learn xgboost lightgbm
 ENV CONDA_PREFIX /opt/conda/envs/plot
 ENV CONDA_DEFAULT_ENV plot
 RUN mkdir -p /home/jupyter/notebooks
