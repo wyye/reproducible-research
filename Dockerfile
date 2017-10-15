@@ -4,8 +4,8 @@ RUN ["apt-get", "install", "-f", "make"]
 USER jupyter
 WORKDIR /home/jupyter/
 ADD requirements.yml /home/jupyter
+RUN conda install -c conda-forge --yes python=3.6 numpy matplotlib jupyter scikit-learn xgboost lightgbm
 RUN ["conda", "env", "create", "-f", "/home/jupyter/requirements.yml"]
-RUN conda install --yes python=3.6 numpy matplotlib jupyter scikit-learn xgboost lightgbm
 ENV CONDA_PREFIX /opt/conda/envs/plot
 ENV CONDA_DEFAULT_ENV plot
 RUN mkdir -p /home/jupyter/notebooks
